@@ -12,20 +12,24 @@ class DetailPage extends StatelessWidget {
       appBar: AppBar(
         title: Text("Halaman Detail"),
       ),
-      body: Column(
-        children: <Widget>[
-          Image.asset(item.image),
-          Padding(
-            padding: EdgeInsets.all(8),
+      body: Container(
+        child: SingleChildScrollView(
+          child: Column(
+            children: <Widget>[
+              Image.asset(item.image),
+              Padding(
+                padding: EdgeInsets.all(8),
+              ),
+              Text(
+                item.title,
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 24,
+                ),
+              ),
+            ],
           ),
-          Text(
-            item.title,
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-              fontSize: 24,
-            ),
-          ),
-        ],
+        ),
       ),
     );
   }
